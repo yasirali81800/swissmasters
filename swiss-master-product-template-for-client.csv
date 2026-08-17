@@ -1,0 +1,6 @@
+Type,SKU,Name,Published,Is featured?,Visibility in catalog,Short description,Description,Tax status,In stock?,Stock,Regular price,Sale price,Categories,Tags,Images,Attribute 1 name,Attribute 1 value(s),Attribute 1 visible,Attribute 1 global,Parent
+simple,EXAMPLE-001,Example Product Name,1,0,visible,Short one-line summary for the product card,"Full product description. You can write multiple sentences here.",taxable,1,10,1000,,Watches,"Automatic, New",https://example.com/image.jpg,,,,,
+simple,EXAMPLE-002,Another Example Product,1,1,visible,Short summary here,Full description here.,taxable,1,5,2500,1999,Accessories,Gift,,Color,"Gold, Silver",1,1,
+variable,EXAMPLE-003,Example Variable Product,1,0,visible,Product with options (e.g. size or strap),Parent product description. Leave Regular price empty for variable products.,taxable,1,,,,"Watches","Field",,Strap,"Leather, NATO, Bracelet",1,1,
+variation,EXAMPLE-003-LEA,Example Variable Product - Leather,1,0,visible,,,taxable,1,8,4200,,,,Strap,Leather,,,EXAMPLE-003
+variation,EXAMPLE-003-NAT,Example Variable Product - NATO,1,0,visible,,,taxable,1,10,3900,,,,Strap,NATO,,,EXAMPLE-003

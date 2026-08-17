@@ -1,0 +1,112 @@
+Swiss Master — Product CSV Guide for Client
+==========================================
+File to fill: swiss-master-product-template-for-client.csv
+Open in Excel / Google Sheets, fill rows, save as CSV (UTF-8), then send back for WooCommerce import.
+
+DELETE the EXAMPLE rows before final import (or keep them only as reference).
+
+COLUMN MEANINGS
+---------------
+Type
+  - simple     = normal product (most items)
+  - variable   = product with options (e.g. strap / size) — parent row
+  - variation  = one option of a variable product — child row
+
+SKU
+  - Unique code for each product/variation (required, no duplicates)
+  - Example: SM-WAT-001
+
+Name
+  - Product title shown on the website
+
+Published
+  - 1 = publish on website
+  - 0 = private
+  - -1 = draft (not visible)
+
+Is featured?
+  - 1 = yes (can show in featured sections)
+  - 0 = no
+
+Visibility in catalog
+  - visible (recommended)
+  - catalog
+  - search
+  - hidden
+
+Short description
+  - One short line under the title (product card / summary)
+
+Description
+  - Full product details
+
+Tax status
+  - taxable (recommended)
+  - shipping
+  - none
+
+In stock?
+  - 1 = in stock
+  - 0 = out of stock
+
+Stock
+  - Quantity available (number)
+
+Regular price
+  - Normal price (numbers only, no currency symbol)
+  - Example: 6200
+  - Leave EMPTY on variable parent rows
+
+Sale price
+  - Discounted price (optional). Leave empty if no sale.
+
+Categories
+  - One category, or several separated by commas
+  - Your store categories include:
+    Watches, Accessories, Fashion Jewellery, Hand Bags,
+    Sunglasses, Perfumes, Antique Paintings, Bespoke
+  - Hierarchy example: Watches > Automatic
+
+Tags
+  - Optional keywords, comma-separated
+  - Example: Automatic, Iconic, Gift
+
+Images
+  - Full image URL(s), comma-separated if more than one
+  - First image = main product image
+  - Or leave empty and we can add images later in WordPress
+
+Attribute 1 name / Attribute 1 value(s)
+  - Only needed for variable products
+  - Example name: Strap
+  - Example values: Leather, NATO, Bracelet
+
+Attribute 1 visible
+  - 1 = show on product page
+  - 0 = hide
+
+Attribute 1 global
+  - 1 = use global attribute (recommended)
+  - 0 = product-only attribute
+
+Parent
+  - Only for variation rows
+  - Put the parent product SKU here (e.g. EXAMPLE-003)
+
+HOW TO ADD A SIMPLE PRODUCT
+---------------------------
+1. Type = simple
+2. Fill SKU, Name, Stock, Regular price, Categories
+3. Leave Parent and Attribute columns empty
+
+HOW TO ADD A VARIABLE PRODUCT
+-----------------------------
+1. One parent row: Type = variable, SKU = SM-WAT-005, fill Name/Categories/Attributes, leave Regular price empty
+2. Child rows: Type = variation, unique SKU each, Parent = SM-WAT-005, Attribute 1 value = one option, Regular price filled
+
+TIPS
+----
+- Do not change header names (first row)
+- Use commas carefully; if text contains commas, keep it inside quotes (Excel/Sheets usually handles this)
+- Prices: numbers only (no AED / $)
+- One product = one row (except variable products = parent + variation rows)
